@@ -23,3 +23,40 @@ common/gestioneEnti/getFunzioni/596319/0/3
 
 
 configs.samples.operator.openshift.io -n openshift-cluster-samples-operator
+
+
+skippedImagestreams:
+  - fis-java-openshift
+  - fis-karaf-openshift
+  - fuse7-console
+  - fuse7-eap-openshift
+  - fuse7-java-openshift
+  - fuse7-karaf-openshift
+  - jboss-fuse70-console
+  - jboss-fuse70-eap-openshift
+  - jboss-fuse70-java-openshift
+  - jboss-fuse70-karaf-openshift
+  - fuse-apicurito-generator
+  - apicurito-ui
+  skippedTemplates:
+  - s2i-fuse78-eap-camel-amq
+  - s2i-fuse78-eap-camel-cdi
+  - s2i-fuse78-eap-camel-cxf-jaxrs
+  - s2i-fuse78-eap-camel-cxf-jaxws
+  - s2i-fuse78-karaf-camel-amq
+  - s2i-fuse78-karaf-camel-log
+  - s2i-fuse78-karaf-camel-rest-sql
+  - s2i-fuse78-karaf-cxf-rest
+  - s2i-fuse78-spring-boot-2-camel-amq
+  - s2i-fuse78-spring-boot-2-camel-config
+  - s2i-fuse78-spring-boot-2-camel-drools
+  - s2i-fuse78-spring-boot-2-camel-infinispan
+  - s2i-fuse78-spring-boot-2-camel-rest-3scale
+  - s2i-fuse78-spring-boot-2-camel-rest-sql
+  - s2i-fuse78-spring-boot-2-camel
+  - s2i-fuse78-spring-boot-2-camel-xa
+  - s2i-fuse78-spring-boot-2-camel-xml
+  - s2i-fuse78-spring-boot-2-cxf-jaxrs
+  - s2i-fuse78-spring-boot-2-cxf-jaxws
+  - s2i-fuse78-spring-boot-2-cxf-jaxrs-xml
+  - s2i-fuse78-spring-boot-2-cxf-jaxws-xml
