@@ -20,3 +20,6 @@ oc delete pod --field-selector=status.phase==Succeeded
 
 
 common/gestioneEnti/getFunzioni/596319/0/3
+
+
+configs.samples.operator.openshift.io -n openshift-cluster-samples-operator
