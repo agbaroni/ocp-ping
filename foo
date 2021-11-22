@@ -16,3 +16,15 @@ oc start-build webapp --from-dir=$PWD/webapp --follow
 
 
 oc delete pod --field-selector=status.phase==Succeeded
+
+
+
+deployment-overlay add --name=foo --content=REL_TO=ABS_FROM --deployments=DEPLS --redeploy-affected
+
+<jboss-deployment-structure>
+  <deployment>
+      <dependencies>
+         <module name="deployment.itextpdf-5.4.3.jar" export="TRUE"/>
+      </dependencies>
+    </deployment>
+</jboss-deployment-structure>
