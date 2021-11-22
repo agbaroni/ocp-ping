@@ -25,6 +25,11 @@ common/gestioneEnti/getFunzioni/596319/0/3
 configs.samples.operator.openshift.io -n openshift-cluster-samples-operator
 
 
+
+https://raw.githubusercontent.com/jboss-fuse/application-templates/application-templates-2.1.0.fuse-sb2-780019-redhat-00005/fis-image-streams.json
+
+
+
 skippedImagestreams:
   - fis-java-openshift
   - fis-karaf-openshift
