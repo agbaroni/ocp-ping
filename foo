@@ -28,40 +28,33 @@ configs.samples.operator.openshift.io -n openshift-cluster-samples-operator
 
 https://raw.githubusercontent.com/jboss-fuse/application-templates/application-templates-2.1.0.fuse-sb2-780019-redhat-00005/fis-image-streams.json
 
-
-
-skippedImagestreams:
-  - fis-java-openshift
-  - fis-karaf-openshift
-  - fuse7-console
-  - fuse7-eap-openshift
-  - fuse7-java-openshift
-  - fuse7-karaf-openshift
-  - jboss-fuse70-console
-  - jboss-fuse70-eap-openshift
-  - jboss-fuse70-java-openshift
-  - jboss-fuse70-karaf-openshift
-  - fuse-apicurito-generator
-  - apicurito-ui
-  skippedTemplates:
-  - s2i-fuse78-eap-camel-amq
-  - s2i-fuse78-eap-camel-cdi
-  - s2i-fuse78-eap-camel-cxf-jaxrs
-  - s2i-fuse78-eap-camel-cxf-jaxws
-  - s2i-fuse78-karaf-camel-amq
-  - s2i-fuse78-karaf-camel-log
-  - s2i-fuse78-karaf-camel-rest-sql
-  - s2i-fuse78-karaf-cxf-rest
-  - s2i-fuse78-spring-boot-2-camel-amq
-  - s2i-fuse78-spring-boot-2-camel-config
-  - s2i-fuse78-spring-boot-2-camel-drools
-  - s2i-fuse78-spring-boot-2-camel-infinispan
-  - s2i-fuse78-spring-boot-2-camel-rest-3scale
-  - s2i-fuse78-spring-boot-2-camel-rest-sql
-  - s2i-fuse78-spring-boot-2-camel
-  - s2i-fuse78-spring-boot-2-camel-xa
-  - s2i-fuse78-spring-boot-2-camel-xml
-  - s2i-fuse78-spring-boot-2-cxf-jaxrs
-  - s2i-fuse78-spring-boot-2-cxf-jaxws
-  - s2i-fuse78-spring-boot-2-cxf-jaxrs-xml
-  - s2i-fuse78-spring-boot-2-cxf-jaxws-xml
+for template in eap-camel-amq-template.json \
+ eap-camel-cdi-template.json \
+ eap-camel-cxf-jaxrs-template.json \
+ eap-camel-cxf-jaxws-template.json \
+ karaf-camel-amq-template.json \
+ karaf-camel-log-template.json \
+ karaf-camel-rest-sql-template.json \
+ karaf-cxf-rest-template.json ;
+ do
+ oc create -n openshift -f \
+ https://raw.githubusercontent.com/jboss-fuse/application-templates/application-templates-2.1.0.fuse-sb2-780019-redhat-00005/quickstarts/${template}
+ done
+ 
+ 
+for template in spring-boot-2-camel-amq-template.json \
+ spring-boot-2-camel-config-template.json \
+ spring-boot-2-camel-drools-template.json \
+ spring-boot-2-camel-infinispan-template.json \
+ spring-boot-2-camel-rest-3scale-template.json \
+ spring-boot-2-camel-rest-sql-template.json \
+ spring-boot-2-camel-template.json \
+ spring-boot-2-camel-xa-template.json \
+ spring-boot-2-camel-xml-template.json \
+ spring-boot-2-cxf-jaxrs-template.json \
+ spring-boot-2-cxf-jaxws-template.json \
+ spring-boot-2-cxf-jaxrs-xml-template.json \
+ spring-boot-2-cxf-jaxws-xml-template.json ;
+ do oc create -n openshift -f \
+ https://raw.githubusercontent.com/jboss-fuse/application-templates/application-templates-2.1.0.fuse-sb2-780019-redhat-00005/quickstarts/${template}
+ done
