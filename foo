@@ -13,3 +13,6 @@ oc label configmap countries app=webapp
 oc set volumes dc/webapp --add --name=countries --configmap-name=countries -m /PROPERTIES --overwrite -t configmap
 
 oc start-build webapp --from-dir=$PWD/webapp --follow
+
+
+oc delete pod --field-selector=status.phase==Succeeded
